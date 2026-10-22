@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "immcraft:block/cupboard",
+      "y": 180
+    },
+    "facing=north": {
+      "model": "immcraft:block/cupboard",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "immcraft:block/cupboard",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "immcraft:block/cupboard",
+      "y": 270
+    }
+  }
+}

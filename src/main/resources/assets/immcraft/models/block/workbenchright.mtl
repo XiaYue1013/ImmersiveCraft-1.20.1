@@ -1,0 +1,20 @@
+# Blender MTL File: 'workbenchright.blend'
+# Material Count: 2
+
+newmtl None
+
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+
+d 1
+
+map_Kd immcraft:block/toollabel
+
+newmtl None_planks_workbench.png
+
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+
+d 1
+
+map_Kd immcraft:block/planks_workbench

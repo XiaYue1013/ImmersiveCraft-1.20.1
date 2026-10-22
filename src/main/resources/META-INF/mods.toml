@@ -1,0 +1,21 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+[[mods]]
+modId="immcraft"
+version="1.20.1-1.6.0-port.2"
+displayName="Immersive Craft (Unofficial Port)"
+authors="McJty (original); Rebuild port contributors"
+description="Unofficial Forge 1.20.1 port: world-space storage, tools, furnace, workbench, books, cables and early survival. Original mod by McJty."
+[[dependencies.immcraft]]
+modId="forge"
+mandatory=true
+versionRange="[47.4.10,48)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.immcraft]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.20.2)"
+ordering="NONE"
+side="BOTH"

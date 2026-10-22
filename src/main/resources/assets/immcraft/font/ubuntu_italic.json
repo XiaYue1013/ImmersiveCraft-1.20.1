@@ -1,0 +1,14 @@
+{
+  "providers": [
+    {
+      "type": "ttf",
+      "file": "immcraft:ubuntu_italic.ttf",
+      "shift": [
+        0,
+        0
+      ],
+      "size": 64,
+      "oversample": 1
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "immcraft:block/bookstand",
+      "y": 0
+    },
+    "facing=north": {
+      "model": "immcraft:block/bookstand",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "immcraft:block/bookstand",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "immcraft:block/bookstand",
+      "y": 90
+    }
+  }
+}

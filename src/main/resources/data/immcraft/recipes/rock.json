@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "immcraft:rock",
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:cobblestone"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "conditions": [
+    {
+      "type": "immcraft:rock_recipe"
+    }
+  ]
+}

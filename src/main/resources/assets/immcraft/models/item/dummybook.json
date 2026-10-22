@@ -1,0 +1,53 @@
+{
+  "parent": "immcraft:item/dummybook_red",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1
+      },
+      "model": "immcraft:item/dummybook_red"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 2
+      },
+      "model": "immcraft:item/dummybook_blue"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 3
+      },
+      "model": "immcraft:item/dummybook_green"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 4
+      },
+      "model": "immcraft:item/dummybook_yellow"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 5
+      },
+      "model": "immcraft:item/dummybook_small_red"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 6
+      },
+      "model": "immcraft:item/dummybook_small_blue"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 7
+      },
+      "model": "immcraft:item/dummybook_small_green"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 8
+      },
+      "model": "immcraft:item/dummybook_small_yellow"
+    }
+  ]
+}

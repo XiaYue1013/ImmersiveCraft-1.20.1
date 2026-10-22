@@ -1,0 +1,10 @@
+{
+  "loader": "forge:obj",
+  "model": "immcraft:models/block/workbenchright.obj",
+  "flip_v": true,
+  "automatic_culling": false,
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "particle": "immcraft:block/planks_chest"
+  }
+}

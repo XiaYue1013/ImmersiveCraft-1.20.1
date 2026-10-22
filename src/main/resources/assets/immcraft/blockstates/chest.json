@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "immcraft:block/chest",
+      "y": 180
+    },
+    "facing=north": {
+      "model": "immcraft:block/chest",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "immcraft:block/chest",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "immcraft:block/chest",
+      "y": 270
+    }
+  }
+}

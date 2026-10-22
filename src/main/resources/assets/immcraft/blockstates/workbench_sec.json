@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "immcraft:block/workbenchright",
+      "y": 0
+    },
+    "facing=north": {
+      "model": "immcraft:block/workbenchright",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "immcraft:block/workbenchright",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "immcraft:block/workbenchright",
+      "y": 90
+    }
+  }
+}

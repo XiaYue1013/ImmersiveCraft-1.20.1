@@ -1,0 +1,22 @@
+{
+  "result": {
+    "item": "immcraft:bookstand"
+  },
+  "pattern": [
+    " t ",
+    "tbt",
+    "sss"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "b": {
+      "item": "minecraft:book"
+    },
+    "s": {
+      "item": "minecraft:oak_slab"
+    },
+    "t": {
+      "item": "minecraft:stick"
+    }
+  }
+}

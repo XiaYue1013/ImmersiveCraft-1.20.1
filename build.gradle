@@ -1,0 +1,66 @@
+plugins {
+ id 'java'
+ id 'net.minecraftforge.gradle' version '[6.0.24,6.2)'
+}
+group = 'mcjty.immcraft'
+version = '1.20.1-1.6.0-port.2'
+base { archivesName = 'immcraft' }
+java { toolchain.languageVersion = JavaLanguageVersion.of(17); withSourcesJar() }
+minecraft {
+ mappings channel: 'official', version: '1.20.1'
+ copyIdeResources = true
+ runs {
+  configureEach {
+   workingDirectory project.file('run')
+   property 'forge.logging.console.level', 'info'
+   property 'forge.enabledGameTestNamespaces', 'immcraft'
+   property 'mixin.env.remapRefMap', 'true'
+   property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+   mods { immcraft { source sourceSets.main } }
+  }
+  client {
+   property 'immcraft.clientSmokeTest', project.findProperty('clientSmokeTest') ?: 'false'
+   property 'immcraft.completionSmokeTest', project.findProperty('completionSmokeTest') ?: 'false'
+   property 'immcraft.mpClient', project.findProperty('mpClient') ?: 'false'
+   if (project.findProperty('mpClient') == 'true') {
+    workingDirectory project.file("run/mp-${project.findProperty('mpName') ?: 'Alice'}")
+    args '--username', project.findProperty('mpName') ?: 'Alice', '--width', '640', '--height', '480'
+    jvmArgs '-Xmx2G', '-XX:ActiveProcessorCount=3'
+   }
+   if (project.findProperty('clientSmokeTest') == 'true') args '--width', '1280', '--height', '720'
+  }
+  server {
+   workingDirectory project.file('run/dedicated'); args '--nogui'
+   property 'immcraft.serverSmokeTest', project.findProperty('serverSmokeTest') ?: 'false'
+   property 'immcraft.mpServer', project.findProperty('mpServer') ?: 'false'
+   if (project.findProperty('mpServer') == 'true') jvmArgs '-Xmx2G', '-XX:ActiveProcessorCount=4'
+  }
+  gameTestServer {}
+ }
+}
+repositories {
+ mavenCentral()
+ maven { url = 'https://maven.k-4u.nl'; metadataSources { artifact() } }
+ maven { url = 'https://cursemaven.com'; metadataSources { artifact() } }
+}
+dependencies {
+ components {
+  withModule('mcjty.theoneprobe:theoneprobe') { allVariants { withDependencies { clear() } } }
+  withModule('curse.maven:jade-324717') { allVariants { withDependencies { clear() } } }
+ }
+ minecraft 'net.minecraftforge:forge:1.20.1-47.4.10'
+ compileOnly(fg.deobf('mcjty.theoneprobe:theoneprobe:1.20.1-10.0.1-3')) { transitive = false }
+ compileOnly(fg.deobf('curse.maven:jade-324717:6106101')) { transitive = false }
+ if (project.findProperty('withIntegrations') == 'true') {
+  runtimeOnly(fg.deobf('mcjty.theoneprobe:theoneprobe:1.20.1-10.0.1-3')) { transitive = false }
+  runtimeOnly(fg.deobf('curse.maven:jade-324717:6106101')) { transitive = false }
+ }
+}
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+tasks.named('jar', Jar).configure {
+ from('LICENSE'); from('NOTICE.md')
+ exclude 'mcjty/immcraft/test/**'
+ exclude 'data/immcraft/structures/arena.nbt'
+ finalizedBy 'reobfJar'
+}
+tasks.named('sourcesJar', Jar).configure { from('LICENSE'); from('NOTICE.md') }

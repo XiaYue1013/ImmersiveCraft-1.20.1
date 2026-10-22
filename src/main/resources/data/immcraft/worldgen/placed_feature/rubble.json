@@ -1,0 +1,8 @@
+{
+  "feature": "immcraft:rubble",
+  "placement": [
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "item.immcraft.chisel": "凿子",
+  "item.immcraft.saw": "锯子",
+  "item.immcraft.dummybook": "仿制书",
+  "block.immcraft.furnace": "熔炉",
+  "block.immcraft.chest": "箱子",
+  "block.immcraft.cupboard": "橱柜",
+  "block.immcraft.shelf": "架子",
+  "block.immcraft.bookshelf": "书架",
+  "block.immcraft.workbench": "工作台 (WIP)",
+  "block.immcraft.workbench_sec": "工作台 (WIP)",
+  "block.immcraft.rock": "石子儿",
+  "block.immcraft.sticks": "棍子",
+  "block.immcraft.in_world_placer": "放置在世界上的方块",
+  "block.immcraft.in_world_vertical_placer": "放置在世界上的方块",
+  "key.nextitem": "下一个可合成物品",
+  "key.previtem": "上一个可合成物品",
+  "key.placeitem": "放置物品到世界上",
+  "key.debughandles": "物品调试"
+}
